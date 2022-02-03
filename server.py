@@ -12,7 +12,9 @@ class Handler(http.server.SimpleHTTPRequestHandler):
     def do_GET(self):
         self.send_response(HTTPStatus.OK)
         self.end_headers()
-        msg = dateparser.parse('2 min')
+        str = self.path
+        slug = str.replace('https://datetimeparse-wm2zb.ondigitalocean.app/','')
+        msg = dateparser.parse(slug)
         
         self.wfile.write(print(msg))
 

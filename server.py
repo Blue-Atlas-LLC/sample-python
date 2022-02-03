@@ -2,6 +2,8 @@ import os
 import http.server
 import socketserver
 import dateparser
+import urllib
+
 
 
 from http import HTTPStatus
@@ -13,7 +15,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         self.end_headers()
         msg = dateparser.parse('1 min')
         
-        self.wfile.write(msg.encode())
+        self.wfile.write(print(msg))
 
 
 port = int(os.getenv('PORT', 80))

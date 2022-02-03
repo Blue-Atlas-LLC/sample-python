@@ -16,7 +16,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         slug = str.replace('https://datetimeparse-wm2zb.ondigitalocean.app/','')
         msg = dateparser.parse(slug)
         
-        self.wfile.write(print(msg))
+        self.wfile.write(msg)
 
 
 port = int(os.getenv('PORT', 80))

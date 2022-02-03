@@ -2,7 +2,6 @@ import os
 import http.server
 import socketserver
 import dateparser
-import urllib
 
 
 
